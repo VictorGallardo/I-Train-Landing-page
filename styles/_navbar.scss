@@ -1,0 +1,73 @@
+@import 'colors';
+@import 'media-queries';
+
+%aling-center {
+	display: flex;
+	align-items: center;
+}
+
+.navbar {
+	@extend %aling-center;
+	position: fixed;
+	justify-content: space-between;
+	z-index: 100;
+	width: 100%;
+	margin: 0;
+	padding: 10px 20px;
+
+	& li.active a {
+		color: $itrain-blue;
+	}
+
+	// &-logo {
+	// 	font-family: 'ethno';
+	// 	color: $itrain-dark;
+	// 	cursor: pointer;
+	// 	text-decoration: none;
+	// 	font-size: 2rem;
+	// 	margin-left: 30px;
+	// 	@extend %aling-center;
+
+	// 	@include mobile {
+	// 		font-size: 1.5rem;
+	// 		margin-top: 20px;
+	// 	}
+	// }
+
+	// &-bars {
+	// 	opacity: 0;
+
+	// 	@include tablet {
+	// 		color: $itrain-dark;
+	// 		opacity: 1;
+	// 		position: absolute;
+	// 		top: 24px;
+	// 		right: 20px;
+	// 		font-size: 2rem;
+	// 	}
+	// }
+
+	&-menu {
+		@extend %aling-center;
+		list-style: none;
+		text-align: center;
+		margin-right: 24px;
+
+		@include tablet {
+			display: none;
+		}
+
+		&-links {
+			@extend %aling-center;
+			color: $itrain-dark;
+			justify-content: center;
+			text-decoration: none;
+			padding: 0 1rem;
+
+			&:hover {
+				color: $itrain-blue;
+				transition: all 0.3s ease;
+			}
+		}
+	}
+}
